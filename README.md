@@ -38,4 +38,14 @@ Der Datensatz beinhaltet folgende verfügbare Spalten:
 
 ### Ergebnis
 
-Abschließend vergleichen wir die Leistung der beiden Modelle, des Decision Trees und des Random Forests. Wir betrachten Genauigkeits-, F1-Score- und Recall-Werte für die positive Klasse (Kreditnehmer, die ihre Schulden nicht vollständig zurückzahlen). Wir stellen fest, dass das Random Forest-Modell in diesem Fall besser abschneidet. Dennoch ist zu beachten, dass keines der Modelle besonders gut darin ist, Kreditnehmer vorherzusagen, die ihre Schulden nicht vollständig zurückzahlen. Dies könnte darauf hinweisen, dass weitere Anpassungen an den Merkmalen oder Modellverbesserungen erforderlich sind.
+Abschließend vergleichen wir die Leistung der beiden Modelle, des Decision Trees und des Random Forests. Wir betrachten Genauigkeits-, F1-Score- und Recall-Werte für die positive Klasse (Kreditnehmer, die ihre Schulden nicht vollständig zurückzahlen). 
+
+- Entscheidungsbaummodell:
+* Recall für die Klasse "1" (not.fully.paid): 0.24
+* Genauigkeit (accuracy): 0.73
+- Random Forest-Modell:
+* Recall für die Klasse "1" (not.fully.paid): 0.02
+* Genauigkeit (accuracy): 0.85
+Die genauen Zahlen zeigen, dass das Random Forest-Modell eine niedrigere Wiederfindungsrate (Recall) für die Klasse "1" aufweist, was bedeutet, dass es weniger effektiv bei der Identifizierung von nicht vollständig zahlenden Kreditnehmern ist als das Entscheidungsbaummodell. Dennoch ist die Genauigkeit des Random Forest-Modells insgesamt höher, was darauf hindeutet, dass es besser in der Lage ist, insgesamt korrekte Vorhersagen zu treffen. Dies zeigt, dass die Wahl zwischen den Modellen von den Prioritäten und Anforderungen des Anwendungsfalls abhängt.
+
+Dennoch ist zu beachten, dass keines der Modelle besonders gut darin ist, Kreditnehmer vorherzusagen, die ihre Schulden nicht vollständig zurückzahlen. Dies könnte darauf hinweisen, dass weitere Anpassungen an den Merkmalen oder Modellverbesserungen erforderlich sind.
