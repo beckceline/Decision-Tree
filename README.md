@@ -3,9 +3,9 @@
 
 Für dieses Projekt werden wir öffentlich verfügbare Daten von LendingClub.com verwenden. Lending Club bringt Leute zusammen, die Geld brauchen (Leihende) und solche, die Geld investieren möchten (Geldgeber). Als Invester möchte man dann verständlicherweise vor allem an die Leute sein Geld verleihen, die es mit einer hohen Wahrscheinlichkeit zurückzahlen. Wir werden versuchen ein Modell zu erstellen, dass bei dieser Vorhersage hilft.
 
-Wir werden Daten von 2007 bis 2010 verwenden, bevor das Unternehmen an die Börse ging. Anhand der Daten werden wir versuchen vorherzusagen, ob ein Leihender das Geld zurückgezahlt hat oder nicht. Die Daten haben wir als CSV in den Kursunterlagen beigefügt. Diese Datei wurde bereits um die nicht verfügbaren Einträge gesäubert.
+Wir werden Daten von 2007 bis 2010 verwenden, bevor das Unternehmen an die Börse ging. Anhand der Daten werden wir versuchen vorherzusagen, ob ein Leihender das Geld zurückgezahlt hat oder nicht. Die Daten stehen als CSV zur Verfügung und wurden bereits um die nicht verfügbaren Einträge gesäubert.
 
-Schauen wir uns noch die verfügbaren Spalten an:
+Der Datensatz beinhaltet folgende verfügbare Spalten:
 
 * credit.policy: 1 falls der Kunde die Risikobewertung besteht, 0 falls nicht.
 * purpose: Der Zweck des Kreidts (Werte sind "credit_card", "debt_consolidation", "educational", "major_purchase", "small_business", und "all_other").
@@ -22,7 +22,7 @@ Schauen wir uns noch die verfügbaren Spalten an:
 * pub.rec: Die Anzahl an negativen Einträgen (Bankrott, Steuerverzug, Verurteilungen,...) des Kreditnehmers.
 
 
-Schritte
+### Schritte
 
 1. Daten laden und Überblick verschaffen: Zu Beginn des Projekts importieren wir verschiedene Python-Bibliotheken, darunter Pandas, NumPy, Matplotlib und Seaborn, um Daten zu analysieren, zu visualisieren und Modelle zu erstellen. Anschließend laden wir die CSV-Datei "loan_data.csv" mithilfe von Pandas in ein DataFrame namens "loans". Wir führen auch einige grundlegende Überprüfungen der Daten durch, um Informationen über die Datenstruktur und den Inhalt zu erhalten.
 
@@ -36,6 +36,6 @@ Schritte
 
 6. Random Forest-Modell: Anschließend erstellen und trainieren wir ein Random Forest-Modell mit dem RandomForestClassifier aus dem sklearn.ensemble-Modul. Dieses Modell basiert auf einer Sammlung von Entscheidungsbäumen und bietet in der Regel bessere Vorhersageleistungen als einzelne Bäume. Wir trainieren das Modell mit den Trainingsdaten, erstellen Vorhersagen für die Testdaten und bewerten seine Leistung.
 
-Ergebnis / Vergleich der Modelle
+### Ergebnis
 
 Abschließend vergleichen wir die Leistung der beiden Modelle, des Decision Trees und des Random Forests. Wir betrachten Genauigkeits-, F1-Score- und Recall-Werte für die positive Klasse (Kreditnehmer, die ihre Schulden nicht vollständig zurückzahlen). Wir stellen fest, dass das Random Forest-Modell in diesem Fall besser abschneidet. Dennoch ist zu beachten, dass keines der Modelle besonders gut darin ist, Kreditnehmer vorherzusagen, die ihre Schulden nicht vollständig zurückzahlen. Dies könnte darauf hinweisen, dass weitere Anpassungen an den Merkmalen oder Modellverbesserungen erforderlich sind.
